@@ -1,0 +1,29 @@
+body{margin:0;background:#202124;color:white;font-family:"Yu Gothic","Meiryo",sans-serif;padding-top:env(safe-area-inset-top)}.container{max-width:540px;margin:auto;padding:16px}.appHeader{text-align:center;margin-bottom:16px}h1{margin:8px 0 4px}.subTitle{color:#ccc;margin-bottom:8px}.todayText{font-size:20px;color:#fff;margin-top:8px;font-weight:bold}.sessionHeader{font-size:19px;color:#00ff99;margin-top:4px;font-weight:bold}.clock{color:#00ff99;font-size:24px;font-weight:bold;margin-top:4px}.courseButton{width:100%;padding:22px;margin-top:15px;font-size:24px;border:none;border-radius:14px;color:white;font-weight:bold}.courseButton span{font-size:16px;font-weight:normal}.weekday{background:#198754}.holiday{background:#fd7e14}.guideBox{margin-top:20px;background:#333;padding:15px;border-radius:10px;color:#ddd;line-height:1.7}.progressBox{background:#111;border-radius:12px;padding:12px;margin-bottom:15px;display:flex;justify-content:space-between;gap:10px;font-size:17px}.targetRow{display:flex;align-items:stretch;gap:8px;margin-bottom:10px}.targetButton{flex:1;text-align:left;padding:14px;border:none;border-radius:12px;font-size:20px;color:white;background:#444}.targetButton.done{background:#1f6f43}.targetButton.running{background:#0d6efd}.targetButton.pending{background:#6b1f1f}.targetButton .small{display:block;font-size:16px;color:#eee;margin-top:6px;line-height:1.55}.rePatrolButton{width:72px;min-width:72px;border:none;border-radius:10px;background:#ffc107;color:#222;font-weight:bold;font-size:14px;line-height:1.2;padding:6px 4px}.statusBox{text-align:center;padding:12px;border-radius:10px;background:#6b1f1f;font-size:22px;font-weight:bold;margin-bottom:18px}.statusRunning{background:#0d6efd}.statusDone{background:#198754}.timeBox{background:#333;color:#00ff99;font-size:30px;text-align:center;padding:14px;margin-bottom:16px;border-radius:10px;font-weight:bold}.mainButton{width:100%;padding:22px;margin-top:12px;font-size:27px;border:none;border-radius:14px;color:white;font-weight:bold}.startMode{background:#28a745}.endMode{background:#dc3545}.arriveMode{background:#0d6efd}.subButton{width:100%;margin-top:14px;padding:14px;font-size:18px;border:none;border-radius:10px;background:#666;color:white}.subButton.danger{background:#6c3a3a}hr{margin:24px 0;border:0;border-top:1px solid #555}.historyEmpty{color:#999;text-align:center;padding:20px;font-style:italic}.historyBlock{background:#2f2f2f;border-left:6px solid #4CAF50;border-radius:8px;padding:12px;margin-bottom:10px}.historyTitle{font-size:22px;font-weight:bold;color:white;margin-bottom:8px}.historyLine{display:block;font-size:23px;color:#00ff99;line-height:1.55;font-weight:bold;word-break:keep-all;overflow-wrap:normal}.historyMove{background:#252525;border-left:6px solid #00ff99;border-radius:8px;padding:10px 12px;margin-bottom:10px}.summaryBox{background:#333;border-radius:12px;padding:18px;line-height:1.9;font-size:18px}.summaryBox strong{display:block;color:#00ff99;font-size:26px;margin-bottom:10px}.remainingList{background:#333;border-radius:10px;padding:12px;line-height:1.8}.finalSession{background:#333;border-radius:12px;padding:14px;margin-bottom:12px;line-height:1.8}
+
+.managementButtonArea{
+    margin-top:16px;
+}
+.warningBox{
+    background:#4a2f00;
+    border-left:6px solid #ffc107;
+    border-radius:8px;
+    padding:12px;
+    margin:14px 0;
+    color:#fff;
+    font-size:18px;
+    line-height:1.6;
+    font-weight:bold;
+}
+.completeBox{
+    background:#173f2b;
+    border-left:6px solid #00ff99;
+    border-radius:8px;
+    padding:12px;
+    margin:14px 0;
+    color:#fff;
+    font-size:18px;
+    line-height:1.6;
+    font-weight:bold;
+}
+
+/* Ver.1.2a */
