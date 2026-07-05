@@ -27,3 +27,104 @@ body{margin:0;background:#202124;color:white;font-family:"Yu Gothic","Meiryo",sa
 }
 
 /* Ver.1.2a */
+
+/* Ver.1.3 iPhone detail screen compact layout */
+.appHeader{margin-bottom:10px;}
+.appHeader h1{font-size:32px;margin:4px 0 2px;}
+.subTitle{font-size:17px;margin-bottom:4px;}
+.todayText{font-size:18px;margin-top:4px;}
+.sessionHeader{font-size:28px;margin-top:6px;}
+.clock{font-size:34px;margin-top:2px;}
+.compactDetail{padding-top:0;}
+.compactDetail h2{font-size:30px;margin:10px 0 14px;}
+.compactDetail .statusBox{padding:14px 10px;font-size:30px;margin-bottom:14px;}
+.timeRow{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#333;border-radius:12px;padding:10px 14px;margin-bottom:10px;}
+.timeLabel{font-size:22px;font-weight:bold;color:#fff;white-space:nowrap;}
+.compactDetail .timeBox{background:transparent;color:#00ff99;font-size:28px;text-align:right;padding:0;margin:0;border-radius:0;min-width:150px;}
+.detailButtonRow{display:flex;gap:12px;margin-top:12px;}
+.compactDetail .mainButton,.compactDetail .subButton{width:50%;margin-top:0;padding:18px 8px;font-size:25px;border-radius:14px;}
+.cancelMode{background:#fd7e14;color:white;font-weight:bold;}
+@media (max-height:760px){
+  .appHeader h1{font-size:28px;}
+  .subTitle{font-size:15px;}
+  .todayText{font-size:16px;}
+  .sessionHeader{font-size:25px;}
+  .clock{font-size:30px;}
+  .compactDetail h2{font-size:27px;margin:8px 0 10px;}
+  .compactDetail .statusBox{font-size:27px;padding:12px 8px;margin-bottom:10px;}
+  .timeRow{padding:8px 12px;margin-bottom:8px;}
+  .timeLabel{font-size:20px;}
+  .compactDetail .timeBox{font-size:25px;}
+  .compactDetail .mainButton,.compactDetail .subButton{padding:15px 8px;font-size:23px;}
+}
+
+/* Ver.1.5 巡回管理画面改善 */
+.managementArea{margin-top:16px;}
+.managementTitle{font-size:24px;font-weight:bold;margin:14px 0 8px;}
+.managementLead{color:#eee;font-size:17px;line-height:1.6;margin:8px 0 14px;}
+.managementInfoGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:#2d2d2d;border:1px solid #444;border-radius:12px;padding:12px;margin:12px 0 14px;}
+.infoCard{text-align:center;}
+.infoLabel{font-size:15px;color:#ddd;margin-bottom:6px;}
+.infoValue{font-size:24px;color:#00ff99;font-weight:bold;line-height:1.4;}
+.infoValue.dangerValue{color:#ff5c5c;}
+.remainingNames{background:#252525;border-left:6px solid #ff5c5c;border-radius:10px;padding:10px 12px;margin:12px 0;color:#fff;font-size:17px;line-height:1.7;}
+.managementButton{width:100%;border:none;border-radius:14px;padding:18px 10px;margin-top:12px;color:#fff;font-weight:bold;}
+.managementButton .mainText{display:block;font-size:25px;line-height:1.35;}
+.managementButton .subText{display:block;font-size:15px;opacity:.95;margin-top:3px;}
+.managementButton.green{background:#198754;}
+.managementButton.orange{background:#fd7e14;}
+.managementButton.blue{background:#0d6efd;}
+.managementButton.purple{background:#6f42c1;}
+.managementSubRow{display:flex;gap:12px;margin-top:12px;}
+.managementSubRow .managementButton{width:50%;margin-top:0;padding:15px 8px;}
+.guideSmall{margin-top:14px;background:#2c2c2c;border:1px solid #444;border-radius:10px;padding:12px;color:#ddd;line-height:1.6;font-size:15px;}
+@media (max-width:420px){.managementInfoGrid{grid-template-columns:1fr;}.managementSubRow{flex-direction:column;}.managementSubRow .managementButton{width:100%;}.managementButton .mainText{font-size:22px;}}
+
+/* Ver.1.5 */
+.managementButton.blue{margin-top:12px;}
+
+/* Ver.1.5 巡回記録：巡回回数ごとのカード表示 */
+.sessionHistoryBlock{
+  background:#1f1f1f;
+  border:1px solid #444;
+  border-radius:12px;
+  padding:12px;
+  margin:14px 0;
+}
+.sessionHistoryTitle{
+  font-size:22px;
+  font-weight:bold;
+  color:#fff;
+  margin-bottom:10px;
+  border-left:6px solid #00ff99;
+  padding-left:10px;
+}
+.sessionHistorySummary{
+  background:#303030;
+  border-radius:10px;
+  padding:10px 12px;
+  margin-bottom:12px;
+  line-height:1.7;
+}
+.sessionHistorySummary div{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  border-bottom:1px solid #444;
+  padding:3px 0;
+}
+.sessionHistorySummary div:last-child{
+  border-bottom:none;
+}
+.sessionHistorySummary span{
+  color:#fff;
+  font-weight:bold;
+}
+.sessionHistorySummary strong{
+  color:#00ff99;
+  font-size:18px;
+}
+.sessionHistoryItems .historyBlock,
+.sessionHistoryItems .historyMove{
+  margin-bottom:8px;
+}
