@@ -14,7 +14,8 @@ function updateTopRouteRanges(){
     holidayEl.innerText=routeRangeText(ROUTE_CONFIG.holiday);
   }
 }
-\nlet selectedCourseKey="",selectedCourse=null,currentSessionNo=1,currentSession=null,sessions=[],targets=[],currentTargetIndex=null,histories=[],lastMoveBaseTime=null;
+
+let selectedCourseKey="",selectedCourse=null,currentSessionNo=1,currentSession=null,sessions=[],targets=[],currentTargetIndex=null,histories=[],lastMoveBaseTime=null;
 setInterval(updateClock,1000);updateClock();setTodayText();registerServiceWorker();restoreState();
 function updateClock(){document.getElementById("clock").innerText=formatTime(new Date())}
 function setTodayText(){document.getElementById("todayText").innerText="本日　"+formatJapaneseDate(new Date())}
