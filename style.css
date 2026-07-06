@@ -58,7 +58,7 @@ body{margin:0;background:#202124;color:white;font-family:"Yu Gothic","Meiryo",sa
   .compactDetail .mainButton,.compactDetail .subButton{padding:15px 8px;font-size:23px;}
 }
 
-/* Ver.1.5 巡回管理画面改善 */
+/* Ver.1.5.1 巡回管理画面改善 */
 .managementArea{margin-top:16px;}
 .managementTitle{font-size:24px;font-weight:bold;margin:14px 0 8px;}
 .managementLead{color:#eee;font-size:17px;line-height:1.6;margin:8px 0 14px;}
@@ -80,10 +80,10 @@ body{margin:0;background:#202124;color:white;font-family:"Yu Gothic","Meiryo",sa
 .guideSmall{margin-top:14px;background:#2c2c2c;border:1px solid #444;border-radius:10px;padding:12px;color:#ddd;line-height:1.6;font-size:15px;}
 @media (max-width:420px){.managementInfoGrid{grid-template-columns:1fr;}.managementSubRow{flex-direction:column;}.managementSubRow .managementButton{width:100%;}.managementButton .mainText{font-size:22px;}}
 
-/* Ver.1.5 */
+/* Ver.1.5.1 */
 .managementButton.blue{margin-top:12px;}
 
-/* Ver.1.5 巡回記録：巡回回数ごとのカード表示 */
+/* Ver.1.5.1 巡回記録：巡回回数ごとのカード表示 */
 .sessionHistoryBlock{
   background:#1f1f1f;
   border:1px solid #444;

@@ -1,4 +1,20 @@
-let selectedCourseKey="",selectedCourse=null,currentSessionNo=1,currentSession=null,sessions=[],targets=[],currentTargetIndex=null,histories=[],lastMoveBaseTime=null;
+
+function routeRangeText(route){
+  if(!route || !route.targets || route.targets.length===0){ return ""; }
+  return `${route.targets[0]} ～ ${route.targets[route.targets.length-1]}`;
+}
+
+function updateTopRouteRanges(){
+  const weekdayEl=document.getElementById("weekdayRangeText");
+  const holidayEl=document.getElementById("holidayRangeText");
+  if(weekdayEl && typeof ROUTE_CONFIG !== "undefined" && ROUTE_CONFIG.weekday){
+    weekdayEl.innerText=routeRangeText(ROUTE_CONFIG.weekday);
+  }
+  if(holidayEl && typeof ROUTE_CONFIG !== "undefined" && ROUTE_CONFIG.holiday){
+    holidayEl.innerText=routeRangeText(ROUTE_CONFIG.holiday);
+  }
+}
+\nlet selectedCourseKey="",selectedCourse=null,currentSessionNo=1,currentSession=null,sessions=[],targets=[],currentTargetIndex=null,histories=[],lastMoveBaseTime=null;
 setInterval(updateClock,1000);updateClock();setTodayText();registerServiceWorker();restoreState();
 function updateClock(){document.getElementById("clock").innerText=formatTime(new Date())}
 function setTodayText(){document.getElementById("todayText").innerText="本日　"+formatJapaneseDate(new Date())}
@@ -169,3 +185,7 @@ function formatDiff(start,end){if(!(start instanceof Date))start=new Date(start)
 function formatJapaneseDate(date){const y=date.getFullYear(),m=date.getMonth()+1,d=date.getDate(),w=["日","月","火","水","木","金","土"][date.getDay()];const reiwa=y-2018;return`令和${toZenkakuNumber(reiwa)}年${m}月${d}日（${w}）`}
 function toZenkakuNumber(n){return String(n).replace(/[0-9]/g,s=>"０１２３４５６７８９"[Number(s)])}
 function escapeHtml(text){return String(text).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+
+document.addEventListener("DOMContentLoaded", function(){
+  updateTopRouteRanges();
+});
