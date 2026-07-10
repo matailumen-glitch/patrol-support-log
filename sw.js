@@ -1,13 +1,13 @@
-const CACHE_NAME = "patrol-support-log-v152";
+const CACHE_NAME = "patrol-support-log-v153";
 const APP_FILES = [
   "./",
   "./index.html",
-  "./style.css",
-  "./script.js",
-  "./route-config.js",
-  "./storage.js",
-  "./manifest.json",
-  "./icon.svg"
+  "./style.css?v=153",
+  "./script.js?v=153",
+  "./route-config.js?v=153",
+  "./storage.js?v=153",
+  "./manifest.json?v=153",
+  "./icon.svg?v=153"
 ];
 
 self.addEventListener("install", event => {
@@ -19,47 +19,32 @@ self.addEventListener("install", event => {
 
 self.addEventListener("activate", event => {
   event.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(
-        keys
-          .filter(key => key !== CACHE_NAME)
-          .map(key => caches.delete(key))
-      )
-    )
+    caches.keys().then(keys => Promise.all(
+      keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
+    ))
   );
   self.clients.claim();
 });
 
 self.addEventListener("fetch", event => {
-  const request = event.request;
+  if (event.request.method !== "GET") return;
 
-  if(request.method !== "GET"){
-    return;
-  }
-
-  const url = new URL(request.url);
-
-  if(url.origin !== self.location.origin){
-    return;
-  }
+  const requestUrl = new URL(event.request.url);
+  if (requestUrl.origin !== self.location.origin) return;
 
   event.respondWith(
-    fetch(request, { cache: "no-store" })
+    fetch(event.request, { cache: "no-store" })
       .then(response => {
-        if(response && response.ok){
+        if (response && response.ok) {
           const copy = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
         }
         return response;
       })
       .catch(() =>
-        caches.match(request).then(cached => {
-          if(cached){ return cached; }
-          if(request.mode === "navigate"){
-            return caches.match("./index.html");
-          }
-          return Response.error();
-        })
+        caches.match(event.request).then(cached =>
+          cached || caches.match("./index.html") || caches.match("./")
+        )
       )
   );
 });
